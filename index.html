@@ -1,13 +1,161 @@
-<html>
-<head>
-<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-<script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
-<body>
-  <a-scene>
-    
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    </head><body class="a-body ">
+      <a-scene>
+        <!--floor-->
+        <a-box position="0 0 0" height="0.2" width="200" depth="200" color="#DFBC4E"></a-box> 
 
-    <a-camera position="0 0 10">
-      <a-cursor></a-cursor>
-    </a-camera>
-  </a-scene>
-</body>
+        <!--compounds walls-->
+
+        <!--left wall-->
+        <a-box position="-80 5 -20" height="10" width="1" depth="120" color="#F58B38"></a-box> 
+        <!--right wall-->
+        <a-box position="80 5 -20" height="10" width="1" depth="120" color="#F58B38"></a-box>
+        <!--back wall-->
+        <a-box position="0 5 -80" height="10" width="161" depth="1" color="#1D42F9"></a-box>
+        <!--front-l wall-->
+        <a-box position="-40 5 40" height="10" width="81" depth="1" color="#1D42F9" opacity="0.75"></a-box>
+        <!--front-r wall-->
+        <a-box position="60 5 40" height="10" width="41" depth="1" color="#1D42F9" opacity="0.75"></a-box>
+
+
+        <!--front room walls-->
+        <!--f1 wall-->
+        <a-box position="0 5 30" height="10" width="1" depth="21" color="#F58B38" opacity="1"></a-box>
+        <!--f2 wall-->
+        <a-box position="-20 5 30" height="10" width="1" depth="21" color="#F58B38" opacity="1"></a-box>
+        <!--f3 wall-->
+        <a-box position="-40 5 30" height="10" width="1" depth="21" color="#F58B38" opacity="1"></a-box>
+        <!--f4 wall-->
+        <a-box position="-60 5 30" height="10" width="1" depth="21" color="#F58B38" opacity="1"></a-box>
+
+
+        <!--left room walls-->
+        <!--l1 wall-->
+        <a-box position="-70 5 0" height="10" width="21" depth="1" color="#1D42F9" opacity="1"></a-box>
+        <!--l2 wall-->
+        <a-box position="-70 5 -20" height="10" width="21" depth="1" color="#1D42F9" opacity="1"></a-box>
+        <!--l3 wall-->
+        <a-box position="-70 5 -40" height="10" width="21" depth="1" color="#1D42F9" opacity="1"></a-box>
+        <!--l4 wall-->
+        <a-box position="-70 5 -60" height="10" width="21" depth="1" color="#1D42F9" opacity="1"></a-box>
+
+
+        <!--back room walls-->
+        <!--b1 wall-->
+        <a-box position="-40 5 -70" height="10" width="1" depth="21" color="#F58B38" opacity="1"></a-box>
+        <!--b2 wall-->
+        <a-box position="-20 5 -70" height="10" width="1" depth="21" color="#F58B38" opacity="1"></a-box>
+        <!--b3 wall-->
+        <a-box position="0 5 -70" height="10" width="1" depth="21" color="#F58B38" opacity="1"></a-box>
+        <!--b4 wall-->
+        <a-box position="20 5 -70" height="10" width="1" depth="21" color="#F58B38" opacity="1"></a-box>
+        <!--b5 wall-->
+        <a-box position="40 5 -70" height="10" width="1" depth="21" color="#F58B38" opacity="1"></a-box>
+        <!--b6 wall-->
+        <a-box position="60 5 -70" height="10" width="1" depth="21" color="#F58B38" opacity="1"></a-box>
+
+
+
+        <!--right room walls-->
+        <!--r1 wall-->
+        <a-box position="50 5 20" height="10" width="21" depth="1" color="#F58B38" opacity="1"></a-box>
+        <!--r2 wall-->
+        <a-box position="60 5 30" height="10" width="1" depth="21" color="#F58B38" opacity="1"></a-box>
+        <!--p1 wall-->
+        <a-box position="60 5 0" height="10" width="41" depth="1" color="#1D42F9" opacity="1"></a-box>
+        <!--c1 wall-->
+        <a-box position="60 5 -50" height="10" width="41" depth="1" color="#1D42F9" opacity="1"></a-box>
+
+
+
+        <!--front close room walls-->
+        <!--fc1 wall-->
+        <a-box position="-8 5 20" height="10" width="16" depth="1" color="#1D42F9" opacity="0.8"></a-box>
+        <!--fc2 wall-->
+        <a-box position="-28 5 20" height="10" width="16" depth="1" color="#1D42F9" opacity="0.8"></a-box>
+        <!--fc3 wall-->
+        <a-box position="-48 5 20" height="10" width="16" depth="1" color="#1D42F9" opacity="0.8"></a-box>
+        <!--fc4 wall-->
+        <a-box position="-68 5 20" height="10" width="16" depth="1" color="#1D42F9" opacity="0.8"></a-box>
+
+
+
+        <!--left close room walls-->
+        <!--lc1 wall-->
+        <a-box position="-60 5 -8" height="10" width="16" depth="1" color="#F58B38" opacity="0.8" rotation="0 90 0"></a-box>
+        <!--lc2 wall-->
+        <a-box position="-60 5 -28" height="10" width="16" depth="1" color="#F58B38" opacity="0.8" rotation="0 90 0"></a-box>
+        <!--lc3 wall-->
+        <a-box position="-60 5 -48" height="10" width="16" depth="1" color="#F58B38" opacity="0.8" rotation="0 90 0"></a-box>
+        <!--lc4 wall-->
+        <a-box position="-60 5 -68" height="10" width="16" depth="1" color="#F58B38" opacity="0.8" rotation="0 90 0"></a-box>
+
+
+
+        <!--back close room walls-->
+        <!--bc1 wall-->
+        <a-box position="-32 5 -60" height="10" width="16" depth="1" color="#1D42F9" opacity="0.8" rotation="0 0 0"></a-box>
+        <!--bc2 wall-->
+        <a-box position="-12 5 -60" height="10" width="16" depth="1" color="#1D42F9" opacity="0.8" rotation="0 0 0"></a-box>
+        <!--bc3 wall-->
+        <a-box position="8 5 -60" height="10" width="16" depth="1" color="#1D42F9" opacity="0.8" rotation="0 0 0"></a-box>
+        <!--bc4 wall-->
+        <a-box position="28 5 -60" height="10" width="16" depth="1" color="#1D42F9" opacity="0.8" rotation="0 0 0"></a-box>
+        <!--bc5 wall-->
+        <a-box position="48 5 -60" height="10" width="16" depth="1" color="#1D42F9" opacity="0.8" rotation="0 0 0"></a-box>
+        <!--bc6 wall-->
+        <a-box position="68 5 -60" height="10" width="16" depth="1" color="#1D42F9" opacity="0.8" rotation="0 0 0"></a-box>
+
+
+
+        <!--right close room walls-->
+        <!--rc1 wall-->
+        <a-box position="40 5 -30" height="10" width="1" depth="40" color="#F58B38" opacity="0.8"></a-box>
+        <!--rc2 wall-->
+        <a-box position="40 5 8" height="10" width="1" depth="16" color="#F58B38" opacity="0.8"></a-box>
+        <!--rc3 wall-->
+        <a-box position="40 5 28" height="10" width="1" depth="16" color="#F58B38" opacity="0.8"></a-box>
+
+
+
+        <!--New room walls-->
+        <!--n1 wall-->
+        <a-box position="-10 5 0" height="10" width="61" depth="1" color="#1D42F9" opacity="0.8" rotation="0 0 0"></a-box>
+        <!--n2 wall-->
+        <a-box position="-40 5 -20" height="10" width="1" depth="40" color="#F58B38" opacity="0.8" rotation="0 0 0"></a-box>
+        <!--n3 wall-->
+        <a-box position="-10 5 -40" height="10" width="61" depth="1" color="#1D42F9" opacity="0.8" rotation="0 0 0"></a-box>
+        <!--n4 wall-->
+        <a-box position="20 5 -25" height="10" width="1" depth="31" color="#F58B38" opacity="0.8" rotation="0 0 0"></a-box>
+
+
+
+
+        <!--top close room walls-->
+        <!--fct1 wall-->
+        <a-box position="-40 9 20" height="2" width="81" depth="1" color="#1D42F9" opacity="0.8" rotation="0 0 0"></a-box>
+        <!--lct1 wall-->
+        <a-box position="-60 9 -40" height="2" width="1" depth="81" color="#1D42F9" opacity="0.8" rotation="0 0 0"></a-box>
+        <!--rct2 wall-->
+        <a-box position="40 9 5" height="2" width="1" depth="91" color="#F58B38" opacity="0.8" rotation="0 0 0"></a-box>
+        <!--bct3 wall-->
+        <a-box position="20 9 -60" height="2" width="121" depth="1" color="#1D42F9" opacity="0.8" rotation="0 0 0"></a-box>
+        <!--nct4 wall-->
+        <a-box position="20 9 -20" height="2" width="1" depth="40" color="#F58B38" opacity="0.8" rotation="0 0 0"></a-box>
+       
+        <a-camera position="0 5 20">
+        <a-cursor></a-cursor>
+        </a-camera>
+
+
+
+        <!--Camera default-->
+        <!--
+        <a-camera position="0 2 110">
+        <a-cursor></a-cursor>
+        </a-camera>
+        -->
+        </a-scene>
+    </body></html>
